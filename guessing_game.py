@@ -18,8 +18,13 @@ def validacao ():
 
      chute = random.randrange(10, 20)
      valida = input("O número secreto é o {}, acertei ?".format(chute)).lower()
+     if(numero_secreto < 10 or numero_secreto > 20):
+            print("Você deve digitar um Número entre 10 e 20")
+            continue
+     
      acertei = numero_secreto == chute
      print(total_tentativas)
+     
 
      if (acertei and valida == "sim"):
           print("Acertei, fim de jogo")
